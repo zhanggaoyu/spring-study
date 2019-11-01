@@ -158,4 +158,4 @@
 
 ---
 本篇到此结束, 这篇文章的重点是关于耦合这方面的, 所以并没有考虑关于线程的问题  
-本篇代码可在此处下载
+本篇代码下载链接: [此处](https://github.com/zhanggaoyu/spring-study) 的 spring01-introduce
