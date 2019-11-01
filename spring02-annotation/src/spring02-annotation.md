@@ -45,3 +45,6 @@
    * 其作用和xml中bean标签的init-method和destroy-method属性一样
    1. @PreDestroy: 指定销毁方法
    2. @PreConstruct: 指定初始化方法
+   
+---
+本文代码: [此处](https://github.com/zhanggaoyu/spring-study) 的 spring02-annotation

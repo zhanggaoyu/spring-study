@@ -1,7 +1,7 @@
 ## spring纯注解开发
 
 ---
-* 说明: 本文是基于一个spring+DBUtils写的数据库CURD操作的小demo
+* 说明: 本文是基于一个spring+DBUtils写的数据库CURD操作的小demo, 地址: [此处](https://github.com/zhanggaoyu/spring-study) 的 spring02-annotation-demo
 1. @Configuration: 指明当前类时一个配置类
    * 细节: 当前类是AnnotationConfigApplicationContext的参数时, 该注解可以不写
 2. 测试代码:
@@ -32,3 +32,7 @@
    * 有该注解的类是主配置|父配置类
 6. @PropertySource: 用指定外部的properties文件
    * 属性: properties文件地址. 用classpath来指定是类路径
+   
+---
+对于注解开发和配置文件开发, 在开发中, 哪种方式方便, 我们就选那种, 两种方式结合会比较多
+本文代码地址: [此处](https://github.com/zhanggaoyu/spring-study) 的 spring02-annotation-noxml
