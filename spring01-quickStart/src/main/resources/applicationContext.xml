@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="hello" class="cn.ann.Hello">
+<!--        <property name="name" value="张三"/>-->
+         <constructor-arg name="name" value="李四"/>
+    </bean>
+
+    <!-- bean的创建方式 -->
+
+    <!-- 构造器 -->
+    <!--<bean id="user" class="cn.ann.User"/>-->
+
+    <!-- 普通工厂 -->
+    <!--<bean id="userFactory" class="cn.ann.UserFactory"/>
+    <bean id="user" factory-bean="userFactory" factory-method="getUser"/>-->
+
+    <!-- 静态工厂 -->
+    <!--<bean id="user" class="cn.ann.StaticFactory" factory-method="getUser"/>-->
+
+
+    <!-- bean的作用范围 -->
+    <!--<bean id="user" class="cn.ann.User" scope="prototype" />-->
+
+
+    <!-- bean的生命周期 -->
+    <!--<bean id="user" class="cn.ann.User" scope="prototype" init-method="init" destroy-method="destroy"/>-->
+
+    <!-- 构造方法注入 -->
+    <!--<bean id="user" class="cn.ann.User">
+        <constructor-arg name="name" value="张三"/>
+        <constructor-arg name="age" value="23"/>
+        <constructor-arg name="birthday" ref="date"/>
+    </bean>-->
+    <bean id="date" class="java.util.Date"/>
+
+    <!-- set注入 -->
+    <bean id="user" class="cn.ann.User">
+        <property name="name" value="zs"/>
+        <property name="age" value="23"/>
+        <property name="birthday" ref="date"/>
+    </bean>
+
+    <!-- 复杂类型注入 -->
+    <bean id="demo" class="cn.ann.CollectionDemo">
+        <property name="strings">
+            <array>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>111</value>
+                <value>222</value>
+                <value>333</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="key01" value="val01"/>
+                <entry key="key02" value="val02"/>
+                <entry key="key03" value="val03"/>
+            </map>
+        </property>
+        <property name="prop">
+            <props>
+                <prop key="prop01">val01</prop>
+                <prop key="prop02">val02</prop>
+                <prop key="prop03">val03</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>
