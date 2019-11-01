@@ -23,7 +23,7 @@
    * @ContextConfiguration: locations指定配置文件路径, classes指定配置类
 3. @ComponentScan: 指明spring创建容器时要扫描的包
    * 属性: value|basePackages两个属性作用一样, 用于指定包
-   * 使用此注解就等同于在xml中配置了```<context:component-scan base-package="cn.ann"/>``
+   * 使用此注解就等同于在xml中配置了 ```<context:component-scan base-package="cn.ann"/>```
 4. @Bean: 用于把当前方法的返回值作为bean对象存入spring容器中
    * 属性: name ---> 用于指定当前bean的id. 默认是方法名
    * 细节: 当我们使用注解配置方法时, 如果方法有参数, spring框架会去容器中查找有没有可用的bean对象. 查找方式与@Autowired注解相同
