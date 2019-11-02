@@ -134,7 +134,7 @@
          public Object aroundLogging(ProceedingJoinPoint pjp) {
              try {
                  System.out.println("前置 ...");
-                 Object ret = pjp.proceed();
+                 Object ret = pjp.proceed(pjp.getArgs());
                  System.out.println("后置 ...");
                  return ret;
              } catch (Throwable throwable) {
