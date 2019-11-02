@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 开启注解 -->
+    <context:component-scan base-package="cn.ann"/>
+
+    <!-- 开启aop注解 -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- 配置accountService(被代理对象)bean -->
+    <!--<bean id="accountService" class="cn.ann.service.impl.AccountServiceImpl"/>-->
+
+    <!-- 配置通知类 -->
+    <!--<bean id="logger" class="cn.ann.util.Logger"/>-->
+
+    <!-- 配置AOP -->
+    <!--<aop:config>
+        &lt;!&ndash; 配置切入点 &ndash;&gt;
+        <aop:pointcut id="logPointcut" expression="execution(* cn.ann.service..*.*(..))"/>
+        &lt;!&ndash; 配置切面 &ndash;&gt;
+        <aop:aspect id="logAdvice" ref="logger">
+            &lt;!&ndash; 前置通知
+            <aop:before method="beforeLogging" pointcut-ref="logPointcut"/> &ndash;&gt;
+            &lt;!&ndash; 后置通知
+            <aop:after-returning method="afterReturningLogging" pointcut-ref="logPointcut"/> &ndash;&gt;
+            &lt;!&ndash; 异常通知
+            <aop:after-throwing method="afterThrowingLogging" pointcut-ref="logPointcut"/> &ndash;&gt;
+            &lt;!&ndash; 最终通知
+            <aop:after method="afterLogging" pointcut-ref="logPointcut"/> &ndash;&gt;
+            &lt;!&ndash; 环绕通知 &ndash;&gt;
+            <aop:around method="aroundLogging" pointcut-ref="logPointcut"/>
+        </aop:aspect>
+    </aop:config>-->
+
+</beans>
